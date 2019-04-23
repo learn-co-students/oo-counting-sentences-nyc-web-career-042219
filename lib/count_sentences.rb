@@ -15,9 +15,6 @@ class String
   end
 
   def count_sentences
-  	# binding.pry
-  	new_arr = []
-  	count = 0
   	arr = self.split(/(?<=[?.!])\s*/)
   	arr.select do |sentence|
   		"abcdefghijklmnopqrstuvwxyz".split('').any? &sentence.downcase.method(:include?)
