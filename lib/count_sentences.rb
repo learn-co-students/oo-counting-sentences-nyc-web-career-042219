@@ -19,12 +19,9 @@ class String
   	new_arr = []
   	count = 0
   	arr = self.split(/(?<=[?.!])\s*/)
-  	for sentence in arr
-  		if "abcdefghijklmnopqrstuvwxyz".split('').any? &sentence.downcase.method(:include?)
-  			count += 1
-  		end
-  	end
-  	count
+  	arr.select do |sentence|
+  		"abcdefghijklmnopqrstuvwxyz".split('').any? &sentence.downcase.method(:include?)
+  	end.length
   end
 
 end
