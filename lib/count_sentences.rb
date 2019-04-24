@@ -36,7 +36,8 @@ class String
         end
 
       end
-      binding.pry
-      return(count)
+  #    binding.pry
+    #  return(count)
+      count
   end
 end
